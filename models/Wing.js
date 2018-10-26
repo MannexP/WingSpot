@@ -1,6 +1,7 @@
 const mongoose = require('../db/connection')
+const Schema =mongoose.Schema
 
-const Wing = new mongoose.Schema({
+const Wing = new Schema({
    style: String,
    flavor: String,
    dip: String,

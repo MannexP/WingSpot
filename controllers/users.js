@@ -6,7 +6,7 @@ const Wingspot = require('../models/Wingspot')
 const usersController = {
     index: (req, res) => {
      res.send('Hey from user index')
-      },     
+      },   
       new: (req, res) => {
         res.send('Hey from user new')
       },   
@@ -23,12 +23,12 @@ const usersController = {
         res.send('Hey from user update')    
       },
       delete: (req, res) => {
-        res.send('Hey from user del') 
+        res.send('Hey from user delete') 
       }
 }
 
 
 
 
-module.exports = userscontroller
+module.exports = usersController
 

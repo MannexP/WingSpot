@@ -1,13 +1,14 @@
 const mongoose = require('../db/connection')
+const Schema =mongoose.Schema
 
-const User = new mongoose.Schema({
+const User = new Schema({
    name: String,
-   location: Number,
+   location: String,
    image: String,
    headline: String,
    wingspots: [
        {
-           type: Schema.Types.ObectId,
+           type: Schema.Types.ObjectId,
            ref: "Wingspot"
        }
    ]

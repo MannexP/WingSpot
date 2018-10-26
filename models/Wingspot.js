@@ -1,6 +1,7 @@
 const mongoose = require('../db/connection')
+const Schema =mongoose.Schema
 
-const Wingspot = new mongoose.Schema({
+const Wingspot = new Schema({
    name: String,
    location: String,
    ambiance: String,

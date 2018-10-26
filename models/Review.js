@@ -1,6 +1,7 @@
 const mongoose = require('../db/connection')
+const Schema =mongoose.Schema
 
-const Review = new mongoose.Schema({
+const Review = new Schema({
     description: String
 })
 

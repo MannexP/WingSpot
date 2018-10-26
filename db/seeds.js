@@ -4,8 +4,6 @@ const User = require('../models/User')
 const Wing = require('../models/Wing')
 const Wingspot = require('../models/Wingspot')
 
-
-
 const review1 = new Review({
     review: "These wings are awesome"
 
@@ -20,6 +18,45 @@ const review3 = new Review({
     review: "These wings are the shiznit"
 
 })
+const wings1 = new Wing({
+    style: "original",
+    flavor: "buffalo",
+    dip: "blue cheese"
+})
+
+const wings2 = new Wing({
+    style: "baked",
+    flavor: "plain",
+    dip: "ranch"
+})
+
+const wings3 = new Wing({
+    style: "boneless",
+    flavor: "lemon pepper",
+    dip: "blue cheese"
+})
+
+const wingspot3 = new Wingspot({
+    name: "Buffalo Wild Wings",
+    location: "Buckhead",
+    ambiance: "Sports Bar"
+
+})
+
+const wingspot2 = new Wingspot({
+    name: "Jr. Crickets",
+    location: "Decatur",
+    ambiance: "Sports Bar"
+})
+
+const wingspot1 = new Wingspot({
+    name: "Taco Mac",
+    location: "Lindbergh",
+    ambiance: "Sports Bar"
+})
+
+
+
 
 const user1 = new User({
     name: "Spencer",
@@ -42,49 +79,18 @@ const user3 = new User({
     headline: "I like wings...alot"
 })
 
-const wings1 = new Wing({
-    style: "original",
-    flavor: "buffalo",
-    dip: "blue cheese"
-})
 
-const wings2 = new Wing({
-    style: "baked",
-    flavor: "plain",
-    dip: "ranch"
-})
 
-const wings3 = new Wing({
-    style: "boneless",
-    flavor: "lemon pepper",
-    dip: "blue cheese"
-})
 
-const wingspot1 = new Wingspot({
-    name: "Taco Mac",
-    location:"Lindbergh",
-    ambiance: "Sports Bar"
-})
-
-const wingspot2 = new Wingspot({
-    name: "Jr. Crickets",
-    location:"Decatur",
-    ambiance: "Sports Bar"
-})
-
-const wingspot3 = new Wingspot({
-    name: "Buffalo Wild Wings",
-    location:"Buckhead",
-    ambiance: "Sports Bar"
-
-})
-
-User.remove({})
-    .then(() =>Wingspot.insertMany([wingspot1,wingspot2, wingspot3]))
-    .then(() =>Wingspot.save())
-    .then(() =>Wing.insertMany([wing1,wing2,wing3]))
-    .then(() =>Wing.save())
-    .then(() =>Review.insertMany([review1,review2,review3]))
-    .then(() =>Review.save())
+User.deleteMany({})
+    .then(()=> Wingspot.deleteMany({}))
+    .then(()=> Wing.deleteMany({}))
+    .then(()=> Review.deleteMany({}))
+    .then(() => Review.insertMany([review1, review2, review3]))
+    .then(() => Wing.insertMany([wings1, wings2, wings3]))
+    .then(() => Wingspot.insertMany([wingspot1, wingspot2, wingspot3]))
+    .then(() => user3.save())
+    .then(() => user2.save())
+    .then(() => user1.save())
     .then(() => console.log("Database seeded success"))
     .then(() => mongoose.connection.close())
