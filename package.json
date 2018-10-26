@@ -12,8 +12,9 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.18.5"
   },
-  "devDependencies": {},
+ 
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./bin/www"
   },
