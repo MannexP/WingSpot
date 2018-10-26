@@ -23,7 +23,7 @@ const usersController = {
         res.send('Hey from user update')    
       },
       delete: (req, res) => {
-        res.send('Hey from user update') 
+        res.send('Hey from user del') 
       }
 }
 
