@@ -81,7 +81,10 @@ const wingspot3 = new Wingspot({
 
 User.remove({})
     .then(() =>Wingspot.insertMany([wingspot1,wingspot2, wingspot3]))
+    .then(() =>Wingspot.save())
     .then(() =>Wing.insertMany([wing1,wing2,wing3]))
+    .then(() =>Wing.save())
     .then(() =>Review.insertMany([review1,review2,review3]))
+    .then(() =>Review.save())
     .then(() => console.log("Database seeded success"))
     .then(() => mongoose.connection.close())
