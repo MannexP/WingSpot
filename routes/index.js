@@ -4,7 +4,7 @@ const applicationController = require('../controllers/application')
 // const reviewsController = require('../controllers/reviews')
 const usersController = require('../controllers/users')
 const wingspotsController = require('../controllers/wingspots')
-// const wingsController = require('../controllers/wings')
+const wingsController = require('../controllers/wings')
 
 //homepage
 router.get('/', applicationController.index)
@@ -23,18 +23,32 @@ router.put('/users/:id', usersController.update)
 router.delete('/users/:id', usersController.delete)
 
 
-// individual user wingspots
+// individual user wingspot
 router.get('/users/:id/wingspot', wingspotsController.index)
 // //create a new wingspot
 router.get('/users/:id/wingspot/new', wingspotsController.new)
-router.post('/users/:id/wingspots', wingspotsController.create)
-// // individual users wingspots
+router.post('/users/:id/wingspot', wingspotsController.create)
+// // individual users wingspot
 router.get('/users/:id/wingspot/:id', wingspotsController.show)
 // // update a wingspot
 router.get('/users/:id/wingspot/:id/edit', wingspotsController.edit)
-router.put('/users/:id/wingspot/:id',wingspotsController.update)
+router.put('/users/:id/wingspot/:id', wingspotsController.update)
 // // delete a wingspot
 router.delete('/users/:id/wingspot/:id', wingspotsController.delete)
+
+// // individual user wings
+// router.get('/users/:id/wingspot/wings', wingspotsController.index)
+// // //create a new wingspot
+// router.get('/users/:id/wingspot/new', wingspotsController.new)
+// router.post('/users/:id/wingspot', wingspotsController.create)
+// // // individual users wingspots
+// router.get('/users/:id/wingspot/:id', wingspotsController.show)
+// // // update a wingspot
+// router.get('/users/:id/wingspot/:id/edit', wingspotsController.edit)
+// router.put('/users/:id/wingspot/:id',wingspotsController.update)
+// // // delete a wingspot
+// router.delete('/users/:id/wingspot/:id', wingspotsController.delete)
+
 
 
 

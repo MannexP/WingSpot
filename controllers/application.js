@@ -1,9 +1,9 @@
 
 
 const applicationController = {
-    index: (req, res) => {
+  index: (req, res) => {
 
-      res.render('application/index')
-    }
+    res.render('application/index')
   }
-  module.exports = applicationController
+}
+module.exports = applicationController

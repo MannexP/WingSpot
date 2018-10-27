@@ -3,12 +3,14 @@ const app = express()
 const methodOverride = require('method-override')
 const logger = require('morgan')
 const routes = require('./routes/index')
+const exphbs = require('exphbs')
 
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(methodOverride('_method'))
 
+app.engine('hbs', exphbs)
 app.set('view engine', 'hbs')
 
 app.use(express.static(__dirname + '/public'))
