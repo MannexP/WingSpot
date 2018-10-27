@@ -55,9 +55,6 @@ const wingspot1 = new Wingspot({
     ambiance: "Sports Bar"
 })
 
-
-
-
 const user1 = new User({
     name: "Spencer",
     location: "Texas",
