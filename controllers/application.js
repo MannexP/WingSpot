@@ -1,5 +1,3 @@
-
-
 const applicationController = {
   index: (req, res) => {
 

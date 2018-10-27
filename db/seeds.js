@@ -76,13 +76,10 @@ const user3 = new User({
     headline: "I like wings...alot"
 })
 
-
-
-
 User.deleteMany({})
-    .then(()=> Wingspot.deleteMany({}))
-    .then(()=> Wing.deleteMany({}))
-    .then(()=> Review.deleteMany({}))
+    .then(() => Wingspot.deleteMany({}))
+    .then(() => Wing.deleteMany({}))
+    .then(() => Review.deleteMany({}))
     .then(() => Review.insertMany([review1, review2, review3]))
     .then(() => Wing.insertMany([wings1, wings2, wings3]))
     .then(() => Wingspot.insertMany([wingspot1, wingspot2, wingspot3]))

@@ -5,7 +5,6 @@ const logger = require('morgan')
 const routes = require('./routes/index')
 const exphbs = require('exphbs')
 
-
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(methodOverride('_method'))

@@ -5,7 +5,25 @@ const Wingspot = require('../models/Wingspot')
 
 const wingController = {
     index: (req, res) => {
-        res.send('it fucking works')
+        res.send('Sup from wings index')
+    },
+    new: (req, res) => {
+        res.send('Sup from wings new')
+    },
+    show: (req, res) => {
+        res.send('Sup from wings show')
+    },
+    create: (req, res) => {
+        res.send('Sup from wings create')
+    },
+    edit: (req, res) => {
+        res.send('Sup from wings edit')
+    },
+    update: (req, res) => {
+        res.send('Sup from wings update')
+    },
+    delete: (req, res) => {
+        res.send('Sup from wings delete')
     }
 }
 
