@@ -1,10 +1,10 @@
 let express = require('express')
 let router = express.Router()
 const applicationController = require('../controllers/application')
-const reviewsController = require('../controllers/reviews')
+// const reviewsController = require('../controllers/reviews')
 const usersController = require('../controllers/users')
-const wingspotsController = require('../controllers/wingspots')
-const wingsController = require('../controllers/wings')
+// const wingspotsController = require('../controllers/wingspots')
+// const wingsController = require('../controllers/wings')
 
 //homepage
 router.get('/', applicationController.index)
@@ -18,7 +18,7 @@ router.post('/users', usersController.create)
 router.get('/users/:id', usersController.show)
 //update user
 router.get('/users/:id/edit', usersController.edit)
-router.put('/users/:id',usersController.update)
+router.put('/users/:id', usersController.update)
 //delete user account
 router.delete('/users/:id', usersController.delete)
 
@@ -32,7 +32,6 @@ router.delete('/users/:id', usersController.delete)
 // router.get('/users/:id/wingspot/:id/edit', wingspotsController.edit)
 // router.put('/users/:id',wingspotsController.update)
 // router.delete('/users/:id', wingspotsController.destroy)
-
 
 
 
