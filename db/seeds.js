@@ -16,64 +16,73 @@ const review3 = new Review({
     review: "These wings are the shiznit"
 
 })
-const wings1 = new Wing({
+const original = new Wing({
     style: "original",
     flavor: "buffalo",
-    dip: "blue cheese"
+    dip: "blue cheese",
+    reviews:[review1,review2]
 })
-const wings2 = new Wing({
+const baked = new Wing({
     style: "baked",
     flavor: "plain",
-    dip: "ranch"
+    dip: "ranch",
+    reviews:[review1,review3]
 })
-const wings3 = new Wing({
+const boneless = new Wing({
     style: "boneless",
     flavor: "lemon pepper",
-    dip: "blue cheese"
+    dip: "blue cheese",
+    reviews:[review3,review2]
 })
-const wingspot3 = new Wingspot({
+const wildwings = new Wingspot({
     name: "Buffalo Wild Wings",
     location: "Buckhead",
-    ambiance: "Sports Bar"
+    ambiance: "Sports Bar",
+    wings:[original,baked,boneless]
 })
-const wingspot2 = new Wingspot({
+const crickets = new Wingspot({
     name: "Jr. Crickets",
     location: "Decatur",
-    ambiance: "Sports Bar"
+    ambiance: "Sports Bar",
+    wings:[baked,boneless]
 })
-const wingspot1 = new Wingspot({
+const tacomac = new Wingspot({
     name: "Taco Mac",
     location: "Lindbergh",
-    ambiance: "Sports Bar"
+    ambiance: "Sports Bar",
+    wings:[original,boneless]
 })
-const user1 = new User({
+const spencer = new User({
     name: "Spencer",
     location: "Texas",
     image: "https://avatars2.githubusercontent.com/u/24259986?s=460&v=4",
-    headline: "I like wings"
+    headline: "I like wings and beer",
+    wingspots:[wildwings,crickets]
 })
 
-const user2 = new User({
+const stan= new User({
     name: "Stan",
     location: "Atlanta",
     image: "https://media.licdn.com/dms/image/C4E03AQGOo-7nDKQfrg/profile-displayphoto-shrink_200_200/0?e=1544659200&v=beta&t=fG_TazpcgrC0HzG6kdNMZFhVlxCMSBRdI92QIo21-AY",
-    headline: "I like wings...right"
+    headline: "I like wings...alot",
+    wingspots:[tacomac,crickets]
 })
-const user3 = new User({
+const cameron = new User({
     name: "Cameron",
     location: "Atlanta",
     image: "https://media.licdn.com/dms/image/C5603AQF82uMwkiX9Ow/profile-displayphoto-shrink_200_200/0?e=1544054400&v=beta&t=0GlQGDGui0dQpc38SkaPl0XWRdPJDelf-oMZHEYq0aM",
-    headline: "I like wings...alot"
+    headline: "I like wings...right",
+    wingspots:[crickets,wildwings]
 })
 User.deleteMany({})
     .then(() => Wingspot.deleteMany({}))
     .then(() => Wing.deleteMany({}))
     .then(() => Review.deleteMany({}))
     .then(() => Review.insertMany([review1, review2, review3]))
-    .then(() => Wing.insertMany([wings1, wings2, wings3]))
-    .then(() => Wingspot.insertMany([wingspot1, wingspot2, wingspot3]))
-    .then(() => user3.save())
-    .then(() => user2.save())
-    .then(() => user1.save())
+    .then(() => Wing.insertMany([original,baked, boneless]))
+    .then(() => Wingspot.insertMany([tacomac, crickets, wildwings]))
+    .then(() => cameron.save())
+    .then(() => stan.save())
+    .then(() => spencer.save())
     .then(() => console.log("Database seeded success"))
     .then(() => mongoose.connection.close())
