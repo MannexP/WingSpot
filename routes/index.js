@@ -20,7 +20,7 @@ router.get('/users/:id', usersController.show)
 router.get('/users/:id/edit', usersController.edit)
 router.put('/users/:id', usersController.update)
 //delete user account
-router.delete('/users/:id', usersController.delete)
+router.delete('/:id', usersController.delete)
 
 // individual user wingspot
 router.get('/users/:id/wingspot', wingspotsController.index)

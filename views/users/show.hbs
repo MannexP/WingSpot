@@ -1,46 +1,36 @@
 <main>
 
-<h2>Hello {{users.name}}!
+    <h2>Hello {{users.name}}!
 
-</h2>
-
-
-<div class="users-container-show">
-<h2 id="users-name">
+    </h2>
 
 
-</h2>
+    <div class="users-container-show">
+        <h2 id="users-name">
 
-<img src="{{users.image}}" />
 
-<br>
-<h5>{{users.headline}}</h5>
-<p>
+        </h2>
 
-{{users.location}}
+        <img src="{{users.image}}" />
 
-</p>
-<h3>WingSpots</h3>
-{{#each users.wingspots}}
-<h3>{{name}}</h3> 
-{{/each}}
-{{!-- 
-{{users.price}} </p><br>
+        <br>
+        <h5>{{users.headline}}</h5>
+        <p>
 
-<h3 id="quantity">
+            {{users.location}}
 
-{{users.qty}}
+        </p>
+        <h3>WingSpots</h3>
+        {{#each users.wingspots}}
+        <h3>{{name}}</h3>
+        {{/each}}
 
-</h3>
 
-<br>
+        <form action="/{{users._id}}?_method=DELETE" method="POST">
+            <button type="submit">Delete User</button>
+        </form>
+        <br>
+    </div>
 
-<a href="/{{users._id}}/edit">EDIT</a>
-<a href="/">Return to Home Page</a> --}}
 
-</div>
-
-<form action="/{{users._id}}?_method=DELETE" method="POST">
-<button type="submit">Delete User</button>
-</form>
 </main>
