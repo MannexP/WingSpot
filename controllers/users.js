@@ -22,8 +22,14 @@ const usersController = {
     })
   },
   create: (req, res) => {
-    User.create(req.body).then((newUser) => {
-      res.redirect(`/${newUser._id}`)
+    User.create({
+      name: req.body.name,
+      location:req.body.location,
+      image:req.body.image,
+      headline:req.body.headline
+    }).then(user => {
+
+      res.redirect(`/user/${user._id}`)
     })
   },
   edit: (req, res) => {
@@ -43,16 +49,4 @@ const usersController = {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 module.exports = usersController
-
