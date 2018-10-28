@@ -22,18 +22,34 @@ const usersController = {
     })
   },
   create: (req, res) => {
-    res.send('Hey from user create')
+    User.create(req.body).then((newUser) => {
+      res.redirect(`/${newUser._id}`)
+    })
   },
   edit: (req, res) => {
-    res.send('Hey from user edit')
+    User.findById(req.params.id).then(users => {
+      res.render('users/edit', { users: users })
+    })
   },
   update: (req, res) => {
-    res.send('Hey from user update')
+    User.findByIdAndUpdate(req.params.id, req.body).then((updatedUser) => {
+      res.redirect(`/${updatedUser._id}`)
+    })
   },
   delete: (req, res) => {
-    res.send('Hey from user delete')
+    User.findByIdAndRemove(req.params.id).then(() => {
+      res.redirect('/')
+    })
   }
 }
+
+
+
+
+
+
+
+
 
 
 
