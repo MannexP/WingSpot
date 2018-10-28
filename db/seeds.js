@@ -56,7 +56,7 @@ const spencer = new User({
     name: "Spencer",
     location: "Texas",
     image: "https://avatars2.githubusercontent.com/u/24259986?s=460&v=4",
-    headline: "I like wings and beer",
+    headline: "I like wings..I love beer",
     wingspots:[wildwings,crickets]
 })
 
