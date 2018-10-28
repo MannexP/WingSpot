@@ -8,12 +8,10 @@ const review1 = new Review({
     review: "These wings are awesome"
 
 })
-
 const review2 = new Review({
     review: "These wings are awesome"
 
 })
-
 const review3 = new Review({
     review: "These wings are the shiznit"
 
@@ -23,38 +21,31 @@ const wings1 = new Wing({
     flavor: "buffalo",
     dip: "blue cheese"
 })
-
 const wings2 = new Wing({
     style: "baked",
     flavor: "plain",
     dip: "ranch"
 })
-
 const wings3 = new Wing({
     style: "boneless",
     flavor: "lemon pepper",
     dip: "blue cheese"
 })
-
 const wingspot3 = new Wingspot({
     name: "Buffalo Wild Wings",
     location: "Buckhead",
     ambiance: "Sports Bar"
-
 })
-
 const wingspot2 = new Wingspot({
     name: "Jr. Crickets",
     location: "Decatur",
     ambiance: "Sports Bar"
 })
-
 const wingspot1 = new Wingspot({
     name: "Taco Mac",
     location: "Lindbergh",
     ambiance: "Sports Bar"
 })
-
 const user1 = new User({
     name: "Spencer",
     location: "Texas",
@@ -68,14 +59,12 @@ const user2 = new User({
     image: "https://media.licdn.com/dms/image/C4E03AQGOo-7nDKQfrg/profile-displayphoto-shrink_200_200/0?e=1544659200&v=beta&t=fG_TazpcgrC0HzG6kdNMZFhVlxCMSBRdI92QIo21-AY",
     headline: "I like wings...right"
 })
-
 const user3 = new User({
     name: "Cameron",
     location: "Atlanta",
     image: "https://media.licdn.com/dms/image/C5603AQF82uMwkiX9Ow/profile-displayphoto-shrink_200_200/0?e=1544054400&v=beta&t=0GlQGDGui0dQpc38SkaPl0XWRdPJDelf-oMZHEYq0aM",
     headline: "I like wings...alot"
 })
-
 User.deleteMany({})
     .then(() => Wingspot.deleteMany({}))
     .then(() => Wing.deleteMany({}))

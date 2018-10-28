@@ -5,13 +5,21 @@ const Wingspot = require('../models/Wingspot')
 
 const usersController = {
   index: (req, res) => {
-    res.send('Hey from user index')
+    User.find().then((users) => {
+      res.render('users/index', {
+        users: users
+      })
+    })
   },
   new: (req, res) => {
-    res.send('Hey from user new yup')
+    res.render('users/new')
   },
   show: (req, res) => {
-    res.send('Hey from user show')
+    User.findById(req.params.id).then((users) => {
+      res.render('users/show', {
+        users: users
+      })
+    })
   },
   create: (req, res) => {
     res.send('Hey from user create')
