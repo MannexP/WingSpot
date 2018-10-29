@@ -25,7 +25,11 @@
         <h3>{{name}}</h3>
         {{/each}}
 
-
+       
+        
+       
+         <a href="{{users._id}}/edit"><button type="submit">Update User</button></a> 
+        
         <form action="/{{users._id}}?_method=DELETE" method="POST">
             <button type="submit">Delete User</button>
         </form>
