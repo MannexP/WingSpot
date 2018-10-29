@@ -11,7 +11,11 @@ const wingspotsController = {
     res.send('Hey from wingspots new')
   },
   show: (req, res) => {
-    res.send('Hey from wingspots show')
+    Wingspot.findById(req.params.id).populate("wings").then((wingspots) => {
+      res.render('wingspots/show', {
+        wingspots: wingspots
+      })
+    })
   },
   create: (req, res) => {
     res.send('Hey from wingspots create')
