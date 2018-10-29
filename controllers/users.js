@@ -27,9 +27,9 @@ const usersController = {
       location:req.body.location,
       image:req.body.image,
       headline:req.body.headline
-    }).then(user => {
+    }).then(users => {
 
-      res.redirect(`/user/${user._id}`)
+      res.redirect(`/users/${users._id}`)
     })
   },
   edit: (req, res) => {
