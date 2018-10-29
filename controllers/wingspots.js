@@ -21,7 +21,7 @@ const wingspotsController = {
     res.send('Hey from wingspots create')
   },
   edit: (req, res) => {
-    Wingspot.findById(req.params.id).then(uwingspots => {
+    Wingspot.findById(req.params.id).then(wingspots => {
       res.render('wingspots/edit', { wingspots: wingspots })
     })
   },
