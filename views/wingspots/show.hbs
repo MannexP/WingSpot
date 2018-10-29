@@ -1,6 +1,6 @@
 <main>
 
-    <h2>Hello {{users.name}}!
+    <h2>Hello {{wingspots.name}}!
 
     </h2>
 
@@ -14,23 +14,23 @@
         <img src="{{users.image}}" />
 
         <br>
-        <h5>{{users.headline}}</h5>
+        <h5>{{wingspots.location}}</h5>
         <p>
 
-            {{users.location}}
+            {{wingspots.ambiance}}
 
         </p>
-        <h3>WingSpots</h3>
-        {{#each users.wingspots}}
-        <a href="/wingspots/{{id}}">
-            <h3>{{name}}</h3>
+        <h3>Wings</h3>
+        {{#each wingspots.wings}}
+        <a href="/:id/wingspots/{{id}}">
+            <h3>{{style}}</h3>
         </a>
         {{/each}}
 
-        <a href="{{users._id}}/edit"><button type="submit">Update User</button></a>
+        <a href="{{wingspots._id}}/edit"><button type="submit">Update Wingspot</button></a>
 
-        <form action="/users/{{users._id}}?_method=DELETE" method="POST">
-            <button type="submit">Delete User</button>
+        <form action="/wingspots/{{wingspots._id}}?_method=DELETE" method="POST">
+            <button type="submit">Delete Wingspot</button>
         </form>
         <br>
     </div>

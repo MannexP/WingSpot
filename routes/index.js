@@ -24,18 +24,17 @@ router.patch('/users/:id', usersController.update)
 //delete user account
 router.delete('/users/:id', usersController.delete)
 
-// individual user wingspot
-router.get('/users/:id/wingspots', wingspotsController.index)
+
 // //create a new wingspot
 router.get('/users/:id/wingspots/new', wingspotsController.new)
 router.post('/users/:id/wingspots', wingspotsController.create)
 // // individual users wingspot
-router.get('/wingspots/:id', wingspotsController.show)
+router.get('/:id/wingspots/:id', wingspotsController.show)
 // // update a wingspot
-router.get('/users/:id/wingspots/:id/edit', wingspotsController.edit)
-router.put('/users/:id/wingspots/:id', wingspotsController.update)
+router.get('/wingspots/:id/edit', wingspotsController.edit)
+router.patch('/wingspots/:id', wingspotsController.update)
 // // delete a wingspot
-router.delete('/users/:id/wingspots/:id', wingspotsController.delete)
+router.delete('/wingspots/:id', wingspotsController.delete)
 
 // individual user wings
 router.get('/users/:id/wingspot/:id/wings', wingsController.index)

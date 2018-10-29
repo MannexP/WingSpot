@@ -21,17 +21,21 @@ const wingspotsController = {
     res.send('Hey from wingspots create')
   },
   edit: (req, res) => {
-    res.send('Hey from wingspots edit')
+    Wingspot.findById(req.params.id).then(uwingspots => {
+      res.render('wingspots/edit', { wingspots: wingspots })
+    })
   },
   update: (req, res) => {
-    res.send('Hey from wingspots update')
+    Wingspot.findByIdAndUpdate(req.params.id, req.body).then((updatedWingspot) => {
+      res.redirect(`/wingspots/${updatedWingspot._id}`)
+    })
   },
   delete: (req, res) => {
-    res.send('Hey from wingspots delete')
+    Wingspot.findByIdAndRemove(req.params.id).then(() => {
+      res.redirect('/')
+    })
   }
 }
-
-
 
 
 module.exports = wingspotsController
