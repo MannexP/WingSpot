@@ -13,12 +13,14 @@ router.get('/', applicationController.index)
 router.get('/users', usersController.index)
 //create a user form/submit
 router.get('/users/new', usersController.new)
+//  new user page
+router.get('/new', usersController.new)
 router.post('/users', usersController.create)
 //individual users page
 router.get('/users/:id', usersController.show)
 //update user
 router.get('/users/:id/edit', usersController.edit)
-router.put('/users/:id', usersController.update)
+router.patch('/users/:id', usersController.update)
 //delete user account
 router.delete('/users/:id', usersController.delete)
 
