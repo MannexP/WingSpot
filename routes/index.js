@@ -32,7 +32,8 @@ router.post('/users/:id/wingspots', wingspotsController.create)
 router.get('/:id/wingspots/:id', wingspotsController.show)
 // // update a wingspot
 router.get('/:id/wingspots/:id/edit', wingspotsController.edit)
-router.patch('/:id/wingspots/:id', wingspotsController.update)
+router.get('/wingspots/:id', wingspotsController.show)
+router.patch('/wingspots/:id', wingspotsController.update)
 // // delete a wingspot
 router.delete('/wingspots/:id', wingspotsController.delete)
 
