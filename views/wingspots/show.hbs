@@ -1,6 +1,6 @@
 <main>
 
-    <h2>{{wingspots.name}}!
+    <h2>{{wingspots.name}}
 
     </h2>
 
@@ -28,13 +28,13 @@
 
      
         <form action="/wingspots/{{wingspots._id}}?_method=DELETE" method="POST">
-            <a href="users/:id"><button type="submit">Delete Wingspot</button></a>
+            <a href="/users"><button type="submit">Delete Wingspot</button></a>
         </form>
         <br>
         <a href='/wingspots/new'><button type="submit">Create New Wing Spot</button> <br>
         <br>
-        <a href="{{wingspots._id}}/edit"><button type="submit">Update Wingspot</bu
+        <a href="{{wingspots._id}}/edit"><button type="submit">Update Wingspot</button>
     </div>
-
+     <a href="/users/:id">Return to Users Page</a>
 
 </main>

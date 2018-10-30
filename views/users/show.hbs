@@ -14,30 +14,30 @@
         <img src="{{users.image}}" />
 
         <br>
-        <h5>{{users.headline}}</h5>
+        <h4>{{users.headline}}</h4>
         <p>
 
-            {{users.location}}
+           <h2> {{users.location}}</h2> 
 
         </p>
-        <h3>{{users.name}}'s Wing Spots</h3>
+        <h3>{{users.name}}'s Favorite Wing Spots</h3>
         {{#each users.wingspots}}
         <a href="/:id/wingspots/{{id}}">
-
-        <a href="">
             <h3>{{name}}</h3>
         </a>
         {{/each}}
+        <br>
 
         <a href="{{users._id}}/edit"><button type="submit">Update User</button></a>
 
         <form action="/users/{{users._id}}?_method=DELETE" method="POST">
             <button type="submit">Delete This User</button>
         </form>
-         <a href='/wingspots/new'><button type="submit">Create New Wing Spot</button></a>
+        <a href='/wingspots/new'><button type="submit">Create New Wing Spot</button></a>
         </form>
     </div>
-     <a href="/users">Return to Users Page</a>
+    <br>
+    <a href="/users">Return to Users Page</a>
 
 
 </main>
