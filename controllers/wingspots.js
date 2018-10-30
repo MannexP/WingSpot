@@ -19,13 +19,6 @@ const wingspotsController = {
     })
   },
   create: (req, res) => {
-    // Wingspot.create({
-    //   name: String,
-    //   location: String,
-    //   ambiance: String,
-    // }).then(wingspots => {
-    //   res.redirect(`/wingspots/${wingspots._id}`)
-    // })
     User.findById(req.params.usersId).populate('wingspots')
     .then(user =>{
       Wingspot.create(req.body).then(newWingspot=> {

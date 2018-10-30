@@ -1,38 +1,46 @@
 <main>
 
-    <h2>{{wingspots.name}}
+    <h2>Hello {{wingspots.name}}!
 
     </h2>
 
 
-    <div class="wingspots-container-show">
-        <h2 id="wingspots-name">
+    <div class="users-container-show">
+        <h2 id="users-name">
 
 
         </h2>
 
+        <img src="{{users.image}}" />
 
         <br>
-        <h5>{{wingspots.location}}</h5>
+        <h4>{{users.headline}}</h4>
         <p>
 
-            {{wingspots.ambiance}}
+           <h2> {{wingspots.location}}</h2> 
 
         </p>
-        <h3>Wings</h3>
-        {{#each wingspots.wings}}
-        <a href="">
-            <h3>{{style}}</h3>
+        <h3>{{users.name}}'s Favorite Wing Spots</h3>
+        {{#each users.wingspots}}
+        <a href="{{../users/id}}/wingspots/{{id}}">
+            <h3>{{name}}</h3>
         </a>
         {{/each}}
-
-     
-        <form action="/wingspots/{{wingspots._id}}?_method=DELETE" method="POST">
-            <a href="/users/show"><button type="submit">Delete Wingspot</button></a>
-        </form>
         <br>
-        <a href="{{wingspots._id}}/edit"><button type="submit">Update Wingspot</button>
+        
+
+        <a href="{{users._id}}/edit"><button type="submit">Update User</button></a>
+        <br>
+        <form action="/users/{{users._id}}?_method=DELETE" method="POST">
+            <button type="submit">Delete This User</button>
+        </form>
+       <br>
+        
+      <a href="{{users._id}}/wingspots/new"> <button>Create New Wing Spot</button></a>
     </div>
-     <a href="/users">Return to Users Page</a>
+    
+    
+    <a href="/users">Return to Users Page</a>
+
 
 </main>

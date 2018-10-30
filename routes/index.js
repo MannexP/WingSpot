@@ -29,7 +29,7 @@ router.delete('/users/:id', usersController.delete)
 
 router.get('/users/:usersId/wingspots/new', wingspotsController.new)
 router.post('/users/:usersId/wingspots', wingspotsController.create)
-router.get('/users/:usersId/wingspots/:wingspotsId', wingspotsController.show)
+router.get('/users/:id/wingspots/:wingspotsId', wingspotsController.show)
 router.get('/users/:usersId/wingspots/:wingstopsId/edit', wingspotsController.edit)
 router.patch('/wingspots/:usersId', wingspotsController.update)
 router.delete('/wingspots/:usersId', wingspotsController.delete)
