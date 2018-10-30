@@ -39,41 +39,12 @@ router.get('/wingspots/:id/edit', wingspotsController.edit)
 router.delete('/wingspots/:id', wingspotsController.delete)
 
 
-// CREATE NEW A USER
-router.get('/new', wingspotsController.new)
-// ACTION OF POSTING TO USERS INDEX
-router.post('/users', wingspotsController.create)
 
 
 
 
 
 
-
-
-
-
-
-
-// // INDIVIDUAL WINGSPOT
-// 
-// // // UPDATE A WINGSPOT PAGE
-// 
-
-
-
-// // router.get('/wingspots/:id', wingspotsController.show)
-// router.get('wingspots/new', wingspotsController.new)
-// router.post('/users/:id/wingspots', wingspotsController.create)
-// // // individual users wingspot
-
-// // // update a wingspot
-// router.get('/:id/wingspots/:id/edit', wingspotsController.edit)
-// // router.get('/wingspots/:id', wingspotsController.show)
-
-// router.post(':id/wingspots/:id', wingspotsController.create)
-// // // delete a wingspot
-// 
 
 
 
