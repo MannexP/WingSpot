@@ -26,18 +26,25 @@ router.delete('/users/:id', usersController.delete)
 
 
 
-//individual users page
-router.get('/:id/wingspots/:id', wingspotsController.show)
-//UPDATE USER 
-router.patch('/wingspots/:id', wingspotsController.update)
-//UPDATE USER  CLICKED PAGE
-router.get('/:id/wingspots/:id/edit', wingspotsController.edit)
-router.get('/wingspots/:id', wingspotsController.show)
-router.get('/:id/wingspots/:id/edit', wingspotsController.edit)
-router.get('/wingspots/:id/edit', wingspotsController.edit)
-//delete user account
+
+router.get('/wingspots/new', wingspotsController.new)
+router.get('/users/:id/wingspots/:id', wingspotsController.show)
+
+
 router.delete('/wingspots/:id', wingspotsController.delete)
-router.post('/users/:userId/wingspots/', wingspotsController.create)
+
+// router.patch('/wingspots/:id', wingspotsController.update)
+// //UPDATE USER  CLICKED PAGE
+// router.get('/:id/wingspots/:id/edit', wingspotsController.edit)
+
+// router.get('/wingspots/:id', wingspotsController.show)
+// router.get('/:id/wingspots/:id/edit', wingspotsController.edit)
+// router.get('/wingspots/:id/edit', wingspotsController.edit)
+// //delete user account
+
+
+// router.post('/users/:userId/wingspots/', wingspotsController.create)
+
 
 
 

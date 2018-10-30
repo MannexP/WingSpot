@@ -4,12 +4,13 @@ const Wing = require('../models/Wing')
 const Wingspot = require('../models/Wingspot')
 
 const wingspotsController = {
-  index: (req, res) => {
-    res.send('Hey from wingspots index')
-  },
+  // index: (req, res) => {
+  //   res.send('Hey from wingspots index')
+  // },
   new: (req, res) => {
-    res.render('/wingspots/new')
+    res.render('wingspots/new')
   },
+
   show: (req, res) => {
     Wingspot.findById(req.params.id).populate("wings").then((wingspots) => {
       res.render('wingspots/show', {
@@ -19,16 +20,20 @@ const wingspotsController = {
   },
   create: (req, res) => {
     User.findById(req.params.userId).then((user)=>{
-        // crete wingspot using req.body
-    })
-    Wingspot.create({
-      name: String,
-      location: String,
-      ambiance: String,
-    }).then(wingspots => {
-
+    Wingspot.create(req.body).then((newWingspot)=> {
+      User.wingspots.push(newWingspot)
+      user.save()
       res.redirect(`/wingspots/${wingspots._id}`)
     })
+    })
+    // Wingspot.create({
+    //   name: String,
+    //   location: String,
+    //   ambiance: String,
+    // }).then(wingspots => {
+
+    //   res.redirect(`/wingspots/${wingspots._id}`)
+    // })
   },
   edit: (req, res) => {
     Wingspot.findById(req.params.id).then(wingspots => {

@@ -22,21 +22,30 @@
         </p>
         <h3>{{users.name}}'s Favorite Wing Spots</h3>
         {{#each users.wingspots}}
-        <a href="/:id/wingspots/{{id}}">
+        <a href="/users/:id/wingspots/{{id}}">
             <h3>{{name}}</h3>
         </a>
         {{/each}}
         <br>
+        {{!-- <h3>{{users.name}}'s Favorite Wing Spots</h3>
+        {{#each users.wingspots}}
+        <a href="/:id/wingspots/{{id}}">
+            <h3>{{name}}</h3>
+        </a>
+        {{/each}}
+        <br> --}}
 
         <a href="{{users._id}}/edit"><button type="submit">Update User</button></a>
-
+        <br>
         <form action="/users/{{users._id}}?_method=DELETE" method="POST">
             <button type="submit">Delete This User</button>
         </form>
-        <a href='/:id/wingspots/new'><button type="submit">Create New Wing Spot</button></a>
-        </form>
+       <br>
+        
+      <a href="/wingspots/new"> <button>Create New Wing Spot</button></a>
     </div>
-    <br>
+    
+    
     <a href="/users">Return to Users Page</a>
 
 
