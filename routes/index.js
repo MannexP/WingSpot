@@ -9,24 +9,37 @@ const wingsController = require('../controllers/wings')
 //homepage
 router.get('/', applicationController.index)
 
-// //All users page
+// SHOWS ALL USERS
 router.get('/users', usersController.index)
-//create a user form/submit
-router.get('/users/new', usersController.new)
-//  new user page
-router.get('/new', usersController.new)
-router.post('/users', usersController.create)
+
 //individual users page
 router.get('/users/:id', usersController.show)
-//update user
-router.get('/users/:id/edit', usersController.edit)
+
+//UPDATE USER 
 router.patch('/users/:id', usersController.update)
+
+//UPDATE USER  CLICKED PAGE
+router.get('/users/:id/edit', usersController.edit)
+
+// CREATE NEW A USER
+router.get('/new', usersController.new)
+// ACTION OF POSTING TO USERS INDEX
+router.post('/users', usersController.create)
+
+//create a user form/submit
+// router.get('/users/new', usersController.new)
+
+
+
+
+
 //delete user account
 router.delete('/users/:id', usersController.delete)
 
 
 // //create a new wingspot
-router.get('/users/:id/wingspots/new', wingspotsController.new)
+router.get('users/:id/wingspots/new', wingspotsController.show)
+router.get('wingspots/new', wingspotsController.new)
 router.post('/users/:id/wingspots', wingspotsController.create)
 // // individual users wingspot
 router.get('/:id/wingspots/:id', wingspotsController.show)
@@ -34,6 +47,7 @@ router.get('/:id/wingspots/:id', wingspotsController.show)
 router.get('/:id/wingspots/:id/edit', wingspotsController.edit)
 router.get('/wingspots/:id', wingspotsController.show)
 router.patch('/wingspots/:id', wingspotsController.update)
+router.post('/wingspots/:id', usersController.create)
 // // delete a wingspot
 router.delete('/wingspots/:id', wingspotsController.delete)
 

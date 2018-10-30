@@ -8,7 +8,7 @@ const wingspotsController = {
     res.send('Hey from wingspots index')
   },
   new: (req, res) => {
-    res.send('Hey from wingspots new')
+    res.render('/wingspots/new')
   },
   show: (req, res) => {
     Wingspot.findById(req.params.id).populate("wings").then((wingspots) => {
@@ -18,7 +18,14 @@ const wingspotsController = {
     })
   },
   create: (req, res) => {
-    res.send('Hey from wingspots create')
+    Wingspot.create({
+      name: String,
+      location: String,
+      ambiance: String,
+    }).then(wingspots => {
+
+      res.redirect(`/wingspots/${wingspots._id}`)
+    })
   },
   edit: (req, res) => {
     Wingspot.findById(req.params.id).then(wingspots => {
