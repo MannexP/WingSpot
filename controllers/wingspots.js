@@ -19,21 +19,21 @@ const wingspotsController = {
     })
   },
   create: (req, res) => {
-    User.findById(req.params.userId).then((user)=>{
-    Wingspot.create(req.body).then((newWingspot)=> {
-      User.wingspots.push(newWingspot)
-      user.save()
+    Wingspot.create({
+      name: String,
+      location: String,
+      ambiance: String,
+    }).then(wingspots => {
+
       res.redirect(`/wingspots/${wingspots._id}`)
     })
-    })
-    // Wingspot.create({
-    //   name: String,
-    //   location: String,
-    //   ambiance: String,
-    // }).then(wingspots => {
-
-    //   res.redirect(`/wingspots/${wingspots._id}`)
-    // })
+    // User.findById(req.params.userId).then((user)=>{
+    //   Wingspot.create(req.body).then((newWingspot)=> {
+    //     User.Wingspot.push(newWingspot)
+    //     user.save()
+    //     res.redirect(`/wingspots/${wingspots._id}`)
+    //   })
+    //   })
   },
   edit: (req, res) => {
     Wingspot.findById(req.params.id).then(wingspots => {

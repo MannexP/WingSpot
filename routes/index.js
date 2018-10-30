@@ -29,15 +29,20 @@ router.delete('/users/:id', usersController.delete)
 
 router.get('/wingspots/new', wingspotsController.new)
 router.get('/users/:id/wingspots/:id', wingspotsController.show)
+router.post('/users/:userid/wingspots/', wingspotsController.create)
+router.get('/wingspots/:id', wingspotsController.show)
+router.get('/users/:id/wingspots/:id/edit', wingspotsController.edit)
+router.patch('/wingspots/:id', wingspotsController.update)
+
 
 
 router.delete('/wingspots/:id', wingspotsController.delete)
 
-// router.patch('/wingspots/:id', wingspotsController.update)
+// 
 // //UPDATE USER  CLICKED PAGE
-// router.get('/:id/wingspots/:id/edit', wingspotsController.edit)
 
-// router.get('/wingspots/:id', wingspotsController.show)
+/
+
 // router.get('/:id/wingspots/:id/edit', wingspotsController.edit)
 // router.get('/wingspots/:id/edit', wingspotsController.edit)
 // //delete user account
