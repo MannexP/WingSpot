@@ -18,6 +18,9 @@ const wingspotsController = {
     })
   },
   create: (req, res) => {
+    User.findById(req.params.userId).then((user)=>{
+        // crete wingspot using req.body
+    })
     Wingspot.create({
       name: String,
       location: String,

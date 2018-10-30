@@ -37,7 +37,7 @@ router.get('/:id/wingspots/:id/edit', wingspotsController.edit)
 router.get('/wingspots/:id/edit', wingspotsController.edit)
 //delete user account
 router.delete('/wingspots/:id', wingspotsController.delete)
-
+router.post('/users/:userId/wingspots/', wingspotsController.create)
 
 
 
