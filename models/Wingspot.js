@@ -5,11 +5,6 @@ const Wingspot = new Schema({
     name: String,
     location: String,
     ambiance: String,
-    wings: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Wing'
-        }
-    ]
+    review: String
 })
 module.exports = mongoose.model('Wingspot', Wingspot)

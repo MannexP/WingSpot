@@ -1,10 +1,10 @@
 let express = require('express')
 let router = express.Router()
 const applicationController = require('../controllers/application')
-const reviewsController = require('../controllers/reviews')
+const reviewsController = require('../controllers/review')
 const usersController = require('../controllers/users')
 const wingspotsController = require('../controllers/wingspots')
-const wingsController = require('../controllers/wings')
+
 
 //homepage
 router.get('/', applicationController.index)
@@ -50,28 +50,6 @@ router.delete('/wingspots/:id', wingspotsController.delete)
 
 // router.post('/users/:userId/wingspots/', wingspotsController.create)
 
-
-
-
-
-
-
-
-
-
-
-// individual user wings
-router.get('/users/:id/wingspot/:id/wings', wingsController.index)
-//create a new wings
-router.get('/users/:id/wingspot/:id/wings/new', wingsController.new)
-router.post('/users/:id/wingspot/:id/wings', wingsController.create)
-// // individual users wings
-router.get('/users/:id/wingspot/:id/wings/:id', wingsController.show)
-// // update a wings
-router.get('/users/:id/wingspot/:id/wings/:id/edit', wingsController.edit)
-router.put('/users/:id/wingspot/:id/wings/:id', wingsController.update)
-// // delete a wings
-router.delete('/users/:id/wingspot/:id/wings/:id', wingsController.delete)
 
 // individual user review
 router.get('/users/:id/wingspot/:id/wings/:id/reviews', reviewsController.index)

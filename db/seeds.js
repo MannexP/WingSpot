@@ -1,7 +1,6 @@
 const mongoose = require('./connection')
 const Review = require('../models/Review')
 const User = require('../models/User')
-const Wing = require('../models/Wing')
 const Wingspot = require('../models/Wingspot')
 
 const review1 = new Review({
@@ -16,41 +15,24 @@ const review3 = new Review({
     review: "These wings are the shiznit"
 
 })
-const original = new Wing({
-    style: "original",
-    flavor: "buffalo",
-    dip: "blue cheese",
-    reviews:[review1,review2]
-})
-const baked = new Wing({
-    style: "baked",
-    flavor: "plain",
-    dip: "ranch",
-    reviews:[review1,review3]
-})
-const boneless = new Wing({
-    style: "boneless",
-    flavor: "lemon pepper",
-    dip: "blue cheese",
-    reviews:[review3,review2]
-})
+
 const wildwings = new Wingspot({
     name: "Buffalo Wild Wings",
     location: "Buckhead",
     ambiance: "Sports Bar",
-    wings:[original,baked,boneless]
+    review:"review3"
 })
 const crickets = new Wingspot({
     name: "Jr. Crickets",
     location: "Decatur",
     ambiance: "Sports Bar",
-    wings:[baked,boneless]
+    review:"review1"
 })
 const tacomac = new Wingspot({
     name: "Taco Mac",
     location: "Lindbergh",
     ambiance: "Sports Bar",
-    wings:[original,boneless]
+    review:"review2"
 })
 const spencer = new User({
     name: "Spencer",
@@ -76,10 +58,9 @@ const cameron = new User({
 })
 User.deleteMany({})
     .then(() => Wingspot.deleteMany({}))
-    .then(() => Wing.deleteMany({}))
+ 
     .then(() => Review.deleteMany({}))
     .then(() => Review.insertMany([review1, review2, review3]))
-    .then(() => Wing.insertMany([original,baked, boneless]))
     .then(() => Wingspot.insertMany([tacomac, crickets, wildwings]))
     .then(() => cameron.save())
     .then(() => stan.save())
