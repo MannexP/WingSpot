@@ -8,7 +8,7 @@ const User = new Schema({
     headline: String,
     wingspots: [
         {
-            type: String,
+            type: Schema.Types.ObjectId,
             ref: "Wingspot"
         }
     ]

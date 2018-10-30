@@ -3,11 +3,12 @@ const User = require('../models/User')
 const Wingspot = require('../models/Wingspot')
 
 const wingspotsController = {
-  // index: (req, res) => {
-  //   res.send('Hey from wingspots index')
-  // },
+
   new: (req, res) => {
-    res.render('wingspots/new')
+    User.findById(req.params.usersId).then(user =>{
+      console.log(user)
+      res.render('wingspots/new', {user: user})
+    })
   },
 
   show: (req, res) => {
@@ -18,21 +19,21 @@ const wingspotsController = {
     })
   },
   create: (req, res) => {
-    Wingspot.create({
-      name: String,
-      location: String,
-      ambiance: String,
-    }).then(wingspots => {
-
-      res.redirect(`/wingspots/${wingspots._id}`)
-    })
-    // User.findById(req.params.userId).then((user)=>{
-    //   Wingspot.create(req.body).then((newWingspot)=> {
-    //     User.Wingspot.push(newWingspot)
-    //     user.save()
-    //     res.redirect(`/wingspots/${wingspots._id}`)
-    //   })
-    //   })
+    // Wingspot.create({
+    //   name: String,
+    //   location: String,
+    //   ambiance: String,
+    // }).then(wingspots => {
+    //   res.redirect(`/wingspots/${wingspots._id}`)
+    // })
+    User.findById(req.params.usersId).populate('wingspots')
+    .then(user =>{
+      Wingspot.create(req.body).then(newWingspot=> {
+        user.wingspots.push(newWingspot)
+        user.save()
+        res.redirect(`/users/${req.params.usersId}/wingspots/${newWingspot._id}`)
+      })
+      })
   },
   edit: (req, res) => {
     Wingspot.findById(req.params.id).then(wingspots => {

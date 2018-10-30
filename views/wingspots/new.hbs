@@ -6,7 +6,7 @@
 
     <div id="edit-form" class="wingspots-container-show">
 
-        <form action="/users/:id/wingspots" method="POST">
+        <form action="/users/{{user._id}}/wingspots" method="POST">
             <div>
                 <label for="name">Name: </label>
                 <input type="text" name="name">
@@ -21,7 +21,7 @@
             </div>
             
            
-            <a href='/wingspots/:id'><button type="submit">Create New Wing Spot</button></a>
+            <button type="submit">Create New Wing Spot</button>
         </form>
     </div>
 </main>

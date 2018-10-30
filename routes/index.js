@@ -11,32 +11,34 @@ router.get('/', applicationController.index)
 
 // SHOWS ALL USERS
 router.get('/users', usersController.index)
-//individual users page
-router.get('/users/:id', usersController.show)
-//UPDATE USER 
-router.patch('/users/:id', usersController.update)
-//UPDATE USER  CLICKED PAGE
-router.get('/users/:id/edit', usersController.edit)
 // CREATE NEW A USER
 router.get('/new', usersController.new)
 // ACTION OF POSTING TO USERS INDEX
 router.post('/users', usersController.create)
+//individual users page
+router.get('/users/:id', usersController.show)
+//UPDATE USER  CLICKED PAGE
+router.get('/users/:id/edit', usersController.edit)
+//UPDATE USER 
+router.patch('/users/:id', usersController.update)
 //delete user account
 router.delete('/users/:id', usersController.delete)
 
 
 
 
-router.get('/wingspots/new', wingspotsController.new)
-router.get('/users/:id/wingspots/:id', wingspotsController.show)
-router.post('/users/:userid/wingspots/', wingspotsController.create)
-router.get('/wingspots/:id', wingspotsController.show)
-router.get('/users/:id/wingspots/:id/edit', wingspotsController.edit)
-router.patch('/wingspots/:id', wingspotsController.update)
+router.get('/users/:usersId/wingspots/new', wingspotsController.new)
+router.post('/users/:usersId/wingspots', wingspotsController.create)
+router.get('/users/:usersId/wingspots/:wingspotsId', wingspotsController.show)
+router.get('/users/:usersId/wingspots/:wingstopsId/edit', wingspotsController.edit)
+router.patch('/wingspots/:usersId', wingspotsController.update)
+router.delete('/wingspots/:usersId', wingspotsController.delete)
 
 
 
-router.delete('/wingspots/:id', wingspotsController.delete)
+
+
+
 
 // 
 // //UPDATE USER  CLICKED PAGE
