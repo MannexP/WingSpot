@@ -22,31 +22,22 @@
         </p>
         <h3>{{users.name}}'s Wing Spots</h3>
         {{#each users.wingspots}}
-<<<<<<< HEAD
         <a href="/:id/wingspots/{{id}}">
-=======
+
         <a href="">
->>>>>>> 52d8b1b5f83c658f980182f1433628a9c0c0f054
             <h3>{{name}}</h3>
         </a>
         {{/each}}
 
         <a href="{{users._id}}/edit"><button type="submit">Update User</button></a>
 
-<<<<<<< HEAD
-=======
-
-
-
-        <a href="{{users._id}}/edit"><button type="submit">Update User</button></a>
-
->>>>>>> 52d8b1b5f83c658f980182f1433628a9c0c0f054
         <form action="/users/{{users._id}}?_method=DELETE" method="POST">
             <button type="submit">Delete This User</button>
         </form>
          <a href='/wingspots/new'><button type="submit">Create New Wing Spot</button></a>
         </form>
     </div>
+     <a href="/users">Return to Users Page</a>
 
 
 </main>
