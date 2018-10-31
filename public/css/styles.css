@@ -6,8 +6,13 @@
 
  .bg-red {
      background: black;
+     display: flex;
+     justify-content: space-around;
  }
-
- .ml-0{
-     justify-content: center;
+ 
+ #header{
+     align-content: center;
+     font-weight: bold;
+     display:flex;
+     justify-content: flex-start;
  }
