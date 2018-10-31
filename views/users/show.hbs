@@ -21,3 +21,12 @@
         </div>
     </div>
 </main>
+
+        <a href="{{users._id}}/edit"><button type="submit" class="btn btn-dark">Update User</button></a>
+        
+        <form action="/users/{{users._id}}?_method=DELETE" method="POST">
+            <button type="submit" class="btn btn-dark">Delete User</button>
+        </form>
+       
+        
+      <a href="{{users._id}}/wingspots/new"><button class="btn btn-dark">Create New Wing Spot</button></a>
