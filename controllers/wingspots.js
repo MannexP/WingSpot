@@ -17,6 +17,7 @@ const wingspotsController = {
       res.render('wingspots/show', {
         wingspots: wingspots,
         userId: req.params.id
+        
       })
     })
   },
