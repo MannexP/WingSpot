@@ -6,6 +6,10 @@ const Wingspot = new Schema({
     image: String,
     location: String,
     type: String,
-    review: String
+    review: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Review'
+
+    }]
 })
 module.exports = mongoose.model('Wingspot', Wingspot)

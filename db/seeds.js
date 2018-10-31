@@ -4,15 +4,15 @@ const User = require('../models/User')
 const Wingspot = require('../models/Wingspot')
 
 const review1 = new Review({
-    review: "These wings are awesome"
+    description: "These wings are awesome"
 
 })
 const review2 = new Review({
-    review: "These wings are awesome"
+    description: "These wings are awesome"
 
 })
 const review3 = new Review({
-    review: "These wings are the shiznit"
+    description: "These wings are the shiznit"
 
 })
 
@@ -21,21 +21,21 @@ const wildwings = new Wingspot({
     image:"https://www.nrn.com/sites/nrn.com/files/styles/article_featured_standard/public/Buffalo%20Wild%20Wings%20Inc_0.jpg?itok=-kx4Kxh_",
     location: "Buckhead",
     type: "Sports Bar",
-    review:"review3"
+    review:[review3]
 })
 const crickets = new Wingspot({
     name: "Jr. Crickets",
     image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyESytEpcPpVTNJkp9knLKkO80YWZ38qQNl9OiffodRD5sRaWgHg",
     location: "Decatur",
     type: "Sports Bar",
-    review:"review1"
+    review:[review1]
 })
 const tacomac = new Wingspot({
     name: "Taco Mac",
     image:"https://webuyblack.com/blog/wp-content/uploads/2018/03/29609655-300x200.jpg",
     location: "Lindbergh",
     type: "Sports Bar",
-    review:"review2"
+    review:[review2]
 })
 const spencer = new User({
     name: "Spencer",

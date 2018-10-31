@@ -5,6 +5,10 @@
      background-color: white;
  }
 
+ #home{
+    background-image: url('/images/wingSpotbkgd.png');
+ }
+
  .bg-red {
      background: black;
      display: flex;
@@ -29,3 +33,4 @@
     display:flex;
     justify-content: center;
  }
+

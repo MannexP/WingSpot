@@ -13,7 +13,7 @@ const wingspotsController = {
     })
   },
   show: (req, res) => {
-    Wingspot.findById(req.params.wingspotsId).then((wingspots) => {
+    Wingspot.findById(req.params.wingspotsId).populate("review").then((wingspots) => {
       res.render('wingspots/show', {
         wingspots: wingspots,
         userId: req.params.id
