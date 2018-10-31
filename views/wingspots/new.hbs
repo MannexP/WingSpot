@@ -1,9 +1,5 @@
 <main>
-
     <h1>Create New Wing Spot</h1>
-
-    
-
     <div id="edit-form" class="wingspots-container-show">
 
         <form action="/users/{{user._id}}/wingspots" method="POST">
@@ -16,11 +12,9 @@
                 <input type="text" name="location">
             </div>
             <div>
-                <label for="ambiance">Ambiance: </label>
-                <input type="text" name="ambiance">
+                <label for="type">Type: </label>
+                <input type="text" name="type">
             </div>
-            
-            <div>{{ blahBlah }}</div>
             <button type="submit">Create New Wing Spot</button>
         </form>
     </div>

@@ -18,20 +18,23 @@ const review3 = new Review({
 
 const wildwings = new Wingspot({
     name: "Buffalo Wild Wings",
+    image:"https://www.nrn.com/sites/nrn.com/files/styles/article_featured_standard/public/Buffalo%20Wild%20Wings%20Inc_0.jpg?itok=-kx4Kxh_",
     location: "Buckhead",
-    ambiance: "Sports Bar",
+    type: "Sports Bar",
     review:"review3"
 })
 const crickets = new Wingspot({
     name: "Jr. Crickets",
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyESytEpcPpVTNJkp9knLKkO80YWZ38qQNl9OiffodRD5sRaWgHg",
     location: "Decatur",
-    ambiance: "Sports Bar",
+    type: "Sports Bar",
     review:"review1"
 })
 const tacomac = new Wingspot({
     name: "Taco Mac",
+    image:"https://webuyblack.com/blog/wp-content/uploads/2018/03/29609655-300x200.jpg",
     location: "Lindbergh",
-    ambiance: "Sports Bar",
+    type: "Sports Bar",
     review:"review2"
 })
 const spencer = new User({
@@ -58,7 +61,6 @@ const cameron = new User({
 })
 User.deleteMany({})
     .then(() => Wingspot.deleteMany({}))
- 
     .then(() => Review.deleteMany({}))
     .then(() => Review.insertMany([review1, review2, review3]))
     .then(() => Wingspot.insertMany([tacomac, crickets, wildwings]))

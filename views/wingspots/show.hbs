@@ -1,24 +1,11 @@
 <main>
-
-    <h2>Hello {{wingspots.name}}!
-
-    </h2>
-
-
-    <div class="users-container-show">
-        <h2 id="users-name">
-
-
-        </h2>
-
-        <img src="{{users.image}}" />
-
+    <h2>{{wingspots.name}}</h2>
+    <div class="wingspots-container-show">
+        <img src="{{wingspots.image}}" />
         <br>
         <h4>{{users.headline}}</h4>
         <p>
-
-           <h2> {{wingspots.location}}</h2> 
-
+            <h2> {{wingspots.location}}</h2>
         </p>
         <h3>{{wingspots.name}}'s Favorite Wing Spots</h3>
         {{#each wingspots.name}}
@@ -26,16 +13,6 @@
             <h3>{{name}}</h3>
         </a>
         {{/each}}
-        <br>
-        
-
-      
-        
-      <a href="{{users._id}}/wingspots/new"> <button>Create New Wing Spot</button></a>
     </div>
-    
-    
     <a href="/users/{{userId}}">Return to Users Page</a>
-
-
 </main>

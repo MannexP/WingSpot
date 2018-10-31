@@ -7,3 +7,7 @@
  .bg-red {
      background: black;
  }
+
+ .ml-0{
+     justify-content: center;
+ }
