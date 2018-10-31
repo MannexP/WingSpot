@@ -13,6 +13,7 @@
 #Wire Frame
 
 ![ERD](public/images/ERD.png)
+![ERD](public/images/wireframe.png)
 
 #Trello https://trello.com/b/lU2KJD8A/wingspot
 
