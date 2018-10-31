@@ -1,23 +1,33 @@
-<main>
-    <h1>
-        WingSpot Afficioandos
-    </h1>
+<main class="mt-4">
 
-    {{#each users}}
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{{image}}">
-        <div class="card-body">
-            <h1 class="card-title">{{name}}</h1>
-            <h4 class="card-text">{{headline}}</h4>
-            <a href="/users/{{_id}}" class="btn btn-dark">My Wing Spots</a>
+    <div class="container">
+        <div class="row">
+            <h1 class="ml-0">WingSpot Afficioandos</h1>
         </div>
     </div>
-    {{/each}}
-
-    <div>
-        <a href='/new'><button type="submit">Create User</button>
+    
+    <div class="container bg-red">
+        <div class="row">
+            {{#each users}}
+                <div class="col-xs-3">
+                   <div class="card m-2" style="width: 18rem;">
+                        <img class="card-img-top" src="{{image}}">
+                        <div class="card-body">
+                            <h1 class="card-title">{{name}}</h1>
+                            <h4 class="card-text">{{headline}}</h4>
+                            <a href="/users/{{_id}}" class="btn btn-dark">My Wing Spots</a>
+                        </div>
+                    </div> 
+                </div>
+            {{/each}}
+        </div>
     </div>
 
 
+    <div class="container pt-4">
+        <div class="row">
+            <a href='/new'><button type="submit">Create User</button>
+        </div>
+    </div>
 
 </main>

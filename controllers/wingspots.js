@@ -3,18 +3,24 @@ const User = require('../models/User')
 const Wingspot = require('../models/Wingspot')
 
 const wingspotsController = {
-
   new: (req, res) => {
+    
     User.findById(req.params.usersId).then(user =>{
-      console.log(user)
-      res.render('wingspots/new', {user: user})
+      // Look up the user 
+      res.render('wingspots/new',
+        {
+          user: user
+        }
+      )
     })
   },
 
   show: (req, res) => {
-    Wingspot.findById(req.params.id).populate("review").then((wingspots) => {
+    console.log(req.params)
+    Wingspot.findById(req.params.wingspotsId).then((wingspots) => {
       res.render('wingspots/show', {
-        wingspots: wingspots
+        wingspots: wingspots,
+        userId: req.params.id
       })
     })
   },

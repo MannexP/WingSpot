@@ -40,30 +40,17 @@ router.delete('/wingspots/:usersId', wingspotsController.delete)
 
 
 
-// 
-// //UPDATE USER  CLICKED PAGE
-
-/
-
-// router.get('/:id/wingspots/:id/edit', wingspotsController.edit)
-// router.get('/wingspots/:id/edit', wingspotsController.edit)
-// //delete user account
-
-
-// router.post('/users/:userId/wingspots/', wingspotsController.create)
-
-
 // individual user review
-router.get('/users/:id/wingspot/:id/wings/:id/reviews', reviewsController.index)
+router.get('/users/:id/wingspot/:id/reviews', reviewsController.index)
 //create a new review
-router.get('/users/:id/wingspot/:id/wings/:id/reviews/new', reviewsController.new)
-router.post('/users/:id/wingspot/:id/wings/:id/reviews', reviewsController.create)
+router.get('/users/:id/wingspot/:id/reviews/new', reviewsController.new)
+router.post('/users/:id/wingspot/:id/reviews', reviewsController.create)
 // // individual users review
-router.get('/users/:id/wingspot/:id/wings/:id/reviews/:id', reviewsController.show)
+router.get('/users/:id/wingspot/:id/reviews/:id', reviewsController.show)
 // // update a review
-router.get('/users/:id/wingspot/:id/wings/:id/reviews/:id/edit', reviewsController.edit)
-router.put('/users/:id/wingspot/:id/wings/:id/reviews/:id', reviewsController.update)
+router.get('/users/:id/wingspot/:id/reviews/:id/edit', reviewsController.edit)
+router.put('/users/:id/wingspot/:id/reviews/:id', reviewsController.update)
 // // delete a review
-router.delete('/users/:id/wingspot/:id/wings/:id/reviews/:id', reviewsController.delete)
+router.delete('/users/:id/wingspot/:id/reviews/:id', reviewsController.delete)
 
 module.exports = router
