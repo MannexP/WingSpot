@@ -1,13 +1,15 @@
-<main>
-    <div class="card" style="width: 18rem;">
-        <img src="{{wingspots.image}}"/> 
-        <div class="card-body">
-            <h5 class="card-title">{{wingspots.name}}</h5>
-            <p class="card-text">{{wingspots.location}}</p>
+<main class="mt-4">
+    <div class="container">
+         <div class="card" style="width: 18rem;">
+            <img src="{{wingspots.image}}"/> 
+            <div class="card-body">
+                <h5 class="card-title">{{wingspots.name}}</h5>
+                <p class="card-text">{{wingspots.location}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{wingspots.type}}</li>
+                <li class="list-group-item">{{wingspots.review}}</li> 
+            </ul>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{wingspots.type}}</li>
-            <li class="list-group-item">{{wingspots.review}}</li> 
-        </ul>
     </div>
 </main>

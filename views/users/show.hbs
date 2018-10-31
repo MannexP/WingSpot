@@ -1,73 +1,23 @@
-{{!-- <main>
-
-    <h2>Hello {{users.name}}!
-
-    </h2>
-
-
-    <div class="users-container-show">
-        <h2 id="users-name">
-
-
-        </h2>
-
-        <img src="{{users.image}}" />
-
-        <br>
-        <h4>{{users.headline}}</h4>
-        <p>
-
-            <h2> {{users.location}}</h2>
-
-        </p>
-        <h3>{{users.name}}'s Favorite Wing Spots</h3>
-        {{#each users.wingspots}}
-        <a href="{{../users/id}}/wingspots/{{id}}">
-            <h3>{{name}}</h3>
-        </a>
-        {{/each}}
-
-        <br>
-
-
-        <a href="{{users._id}}/edit"><button type="submit">Update User</button></a>
-        <br>
-        <form action="/users/{{users._id}}?_method=DELETE" method="POST">
-            <button type="submit">Delete This User</button>
-        </form>
-        <br>
-
-        <a href="{{users._id}}/wingspots/new"> <button>Create New Wing Spot</button></a>
-    </div>
-
-
-    <a href="/users">Return to Users Page</a>
-
-
-</main> --}}
-<div class="container">
-    <div class="card" style="width: 30rem;">
-        <img src="{{users.image}}" />
-        <div class="card-body">
-            <h3>{{users.name}}</h3>
-            <h4>{{users.headline}}</43>
-            <h3>{{users.location}}</h3>
-        </div>
-        <ul class="list-group list-group-flush">
-             <h3>{{users.name}}'s Favorite Wing Spots</h3>
-        {{#each users.wingspots}}
-        <a href="{{../users/id}}/wingspots/{{id}}">
-            <h3>{{name}}</h3>
-        </a>
-        {{/each}}
-
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+<main class="mt-4">
+    <div class="container" id="users" style="width: 300px;" >
+        <div class="mx-auto"  style="width: 200px;">
+            <div class="container">
+                <div class="card" style="width: 25rem;">
+                    <img src="{{users.image}}" />
+                    <div class="card-body">
+                        <h3>{{users.name}}</h3>
+                        <h4>{{users.headline}}</43>
+                            <h3>{{users.location}}</h3>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <h3>{{users.name}}'s Favorite Wing Spots</h3>
+                        {{#each users.wingspots}}
+                        <a href="{{../users/id}}/wingspots/{{id}}">
+                            <h3>{{name}}</h3>
+                        </a>
+                        {{/each}}
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</main>

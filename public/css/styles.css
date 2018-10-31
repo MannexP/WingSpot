@@ -1,6 +1,7 @@
 
  body {
      background-image:url(/images/multi-wings.png);
+     /* background-image:url(/images/wingSpotbkgd.png); */
      background-color: white;
  }
 
@@ -15,4 +16,16 @@
      font-weight: bold;
      display:flex;
      justify-content: flex-start;
+ }
+
+ .mx-auto{
+     display: flex;
+     justify-content: left;
+     align-content: center;
+ }
+
+ #users{
+    background: black;
+    display:flex;
+    justify-content: center;
  }
