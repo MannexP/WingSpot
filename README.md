@@ -1,20 +1,18 @@
 # WingSpot
 
-<<<<<<< HEAD
 
 #Overview Wing Spot is a full stack application where users can create a user profile which inclused their name, location, image and a headline. Once a user has been created, they are able to add a Wing Spot(establishment) and review the establishment on their wings, vegan wings included. The application is fullcrud on two of its three models.
-=======
-#Overview Wing Spot is a full stack application where users can create a user profile which inclused their name, location, image and a headline. Once a user has been created, they are able to add a Wing Spot(establishment) and review the establishment on their wings, vegan wings included. The application is fullcrud on two of its three models. 
 
->>>>>>> c07339bb64d70970054e8e84fc67a5a9f18c3e20
+
+
 
 #Live site https://calm-brushlands-83999.herokuapp.com/
 
 #Technologies Used Languages HTML5, CSS3, Bootstrap,Font Meme,Trello VS Code, and Adobe Photoshop.
 
 #Wire Frame
-<<<<<<< HEAD
-<img src=(/images/multi-wings.png)>
+
+![ERD] (images/ERD.png)
 
 #Trello https://trello.com/b/lU2KJD8A/wingspot
 
