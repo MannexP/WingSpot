@@ -1,15 +1,20 @@
 <main class="mt-4">
     <div class="container">
-         <div class="card" style="width: 18rem;">
-            <img src="{{wingspots.image}}"/> 
+        <div class="card" style="width: 18rem;">
+            <img src="{{wingspots.image}}" />
             <div class="card-body">
                 <h5 class="card-title">{{wingspots.name}}</h5>
                 <p class="card-text">{{wingspots.location}}</p>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">{{wingspots.type}}</li>
-                <li class="list-group-item">{{wingspots.review}}</li> 
+                <li class="list-group-item">{{wingspots.review}}</li>
             </ul>
         </div>
     </div>
 </main>
+<a href="{{users._id}}/wingspots/new"> <button class="btn btn-dark">Create New Wing Spot</button></a><br>
+
+<form action="/wingspots/{{wingspots._id}}?_method=DELETE" method="POST">
+    <a href="/users"><button type="submit" class="btn btn-dark">Delete Wingspot</button></a>
+</form>
