@@ -13,6 +13,8 @@
 #Wire Frame
 
 ![ERD](public/images/ERD.png)
+![WFR](public/images/WFR.png)
+
 
 
 
