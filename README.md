@@ -7,7 +7,10 @@
 
 #Technologies Used Languages HTML5, CSS3, Bootstrap,Font Meme,Trello VS Code, and Adobe Photoshop.
 
-#Wire Frame
+#Wire Frames
+
+<img src="wireframe.png">
+<img src="wireframe2.png">
 
 
 #Trello https://trello.com/b/lU2KJD8A/wingspot
