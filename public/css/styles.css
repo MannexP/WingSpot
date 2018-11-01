@@ -39,3 +39,11 @@
 .text-center{
     margin-left:400px;
 }
+.user-buttons{
+
+}
+#buttons{
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+}

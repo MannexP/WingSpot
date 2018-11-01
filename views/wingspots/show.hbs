@@ -15,8 +15,11 @@
         </div>
     </div>
 </main>
-<a href="{{users._id}}/wingspots/new"> <button class="btn btn-dark">Create New Wing Spot</button></a><br>
+<div class="row m-5">
+    <a href="{{users._id}}/wingspots/new"> <button class="btn btn-dark">Create New Wing Spot</button></a><br>
 
-<form action="/wingspots/{{wingspots._id}}?_method=DELETE" method="POST">
-    <a href="/users"><button type="submit" class="btn btn-dark">Delete Wingspot</button></a>
-</form>
+    <form action="/wingspots/{{wingspots._id}}?_method=DELETE" method="POST">
+        <a href="/users"><button type="submit" class="btn btn-dark">Delete Wingspot</button></a>
+    </form>
+
+</div>
