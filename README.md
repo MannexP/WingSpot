@@ -14,7 +14,7 @@
 
 ![ERD](public/images/ERD.png)
 
-![wireframe](public/images/wireframe.png)
+
 
 
 
