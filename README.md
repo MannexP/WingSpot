@@ -12,12 +12,9 @@
 
 #Wire Frame
 
+https://www.figma.com/file/OWBjE3gzjJLfFiTQENd3R7dN/Wing-Spot?node-id=1%3A96
+
 ![ERD](public/images/ERD.png)
-
-
-
-
-
 
 
 
@@ -28,7 +25,6 @@
 #Reflections: I learned crud. I also have a better understand of how the back end is connected and most importantly how to render in Handlebars.I still have work to do to fully grasp concepts like req.body and how to call data in controllers to render in HBS. Overall my understanding of rMVC is clear. I'm looking forward to creating on the knowledge that I gained over the past week.
 
 #Phase 2 Adding Auth to the project and continue to stlye.
-=======
 
 
 
