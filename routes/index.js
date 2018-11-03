@@ -26,18 +26,14 @@ router.delete('/users/:id', usersController.delete)
 
 router.get('/users/:usersId/wingspots/new', wingspotsController.new)
 router.post('/users/:usersId/wingspots', wingspotsController.create)
-router.get('/users/:id/wingspots/:wingspotsId', wingspotsController.show)
-router.get('/users/:usersId/wingspots/:wingstopsId/edit', wingspotsController.edit)
-router.patch('/wingspots/:usersId', wingspotsController.update)
-router.delete('/wingspots/:usersId', wingspotsController.delete)
+router.get('/users/:usersId/wingspots/:wingspotsId', wingspotsController.show)
+router.get('/users/:usersId/wingspots/:wingspotsId/edit', wingspotsController.edit)
+router.patch('/users/:usersId/wingspots/:wingspotsId', wingspotsController.update)
+router.delete('/users/:usersId/wingspots/:wingspotsId', wingspotsController.delete)
 
 
-// // individual users review
-router.get('/users/:id/wingspot/:id/reviews/:id', reviewsController.show)
-// // // update a review
-// router.get('/users/:id/wingspot/:id/reviews/:id/edit', reviewsController.edit)
-// router.put('/users/:id/wingspot/:id/reviews/:id', reviewsController.update)
-// // // delete a review
-// router.delete('/users/:id/wingspot/:id/reviews/:id', reviewsController.delete)
+
+router.get('/users/:id/wingspots/:wingspotsId/reviews', reviewsController.show)
+
 
 module.exports = router
