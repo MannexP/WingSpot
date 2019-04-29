@@ -1,4 +1,4 @@
-<main class="mt-4">
+{{!-- <main class="mt-4">
 
     <div class="container">
         <div class="row">
@@ -32,4 +32,39 @@
         </div>
     </div>
 
-</main>
+</main> --}}
+<div class="container-fluid hero">
+    <div class="hero-overlay"></div>
+    <h1>Wing Spot Fanatics</h1>
+</div>
+
+<div class="container content">
+    <h1>All Fanatics</h1>
+    <div class="row">
+        {{#each users}}
+            <div class="col-sm-12">
+                <div class="card">
+                    <img class="card-img" src="{{image}}">
+                    <div class="card-body">
+                        <div class="content-wrapper left">
+                            <div class="details">
+                                <h1 class="card-title">{{name}}</h1>
+                                <h4 class="card-text">{{headline}}</h4>
+                            </div>
+                            <div class="wingspots">
+                                {{#each wingspots}}
+                                    <a href="/users/{{_id}}" class="btn btn-dark">{{ this.wingspots.name }}</a>
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="content-wrapper right">
+                            <h4 class="card-text">{{location}}</h4>
+                            <a href="/users/{{_id}}" class="btn btn-dark">All Wing Spots</a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        {{/each}}
+    </div>
+</div>
+
