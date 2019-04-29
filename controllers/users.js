@@ -15,9 +15,10 @@ const usersController = {
     res.render('users/new')
   },
   show: (req, res) => {
-    User.findById(req.params.id).populate("wingspots").then((users) => {
+    User.findById(req.params.id).populate("wingspots").then((user) => {
       res.render('users/show', {
-        users: users
+        user: user,
+        wingspots: user.wingspots,
       })
     })
   },

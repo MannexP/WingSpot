@@ -143,3 +143,14 @@
 .content .card-body .btn {
     padding: 16px 32px;
 }
+
+.content .action-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+.new-wingspot {
+    margin: 80px 0;
+}

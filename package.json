@@ -2,9 +2,12 @@
   "name": "wingspot",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "^11.3.0",
+    "npm": "^6.9.0"
+  },
   "main": "server.js",
   "dependencies": {
-    "antd": "^3.16.6",
     "dotenv": "^6.1.0",
     "exphbs": "^1.2.0",
     "express": "^4.16.4",
@@ -12,6 +15,7 @@
     "method-override": "^3.0.0",
     "mongoose": "^5.3.7",
     "morgan": "^1.9.1",
+    "node": "^11.3.0",
     "nodemon": "^1.18.5"
   },
   "scripts": {
