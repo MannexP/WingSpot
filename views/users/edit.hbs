@@ -1,33 +1,34 @@
-<main>
+<div class="container-fluid hero">
+    <div class="hero-overlay"></div>
+    <h1>Update User</h1>
+</div>
 
-  <h2>Update Profile</h2>
+<main class="container">
+  <div class="content-wrapper">
+      <h2>Update Profile</h2>
+      <div id="edit-form" class="users-container-show">
 
+        <form action="/users/{{users._id}}?_method=PATCH" method="POST">
+          <div>
+            <label for="name">name: </label>
+            <input type="text" name="name" value="{{users.name}}">
+          </div>
+          <div>
+            <label for="dlocation">location: </label>
+            <input type="text" name="location" value="{{users.location}}">
+          </div>
+          <div>
+            <label for="image">img: </label>
+            <input type="text" name='image' value="{{users.image}}">
+          </div>
+          <div>
+            <label for="headline">headline: </label>
+            <input type="" name="headline" value="{{users.headline}}">
+          </div>
 
-
-  <div id="edit-form" class="users-container-show">
-
-    <form action="/users/{{users._id}}?_method=PATCH" method="POST">
-      <div>
-        <label for="name">name: </label>
-        <input type="text" name="name" value="{{users.name}}">
+          <a href='/users/{{_id}}'><button type="submit">Update Profile</button>
+        </form>
+        <a href="/users">Return to User Page</a>
       </div>
-      <div>
-        <label for="dlocation">location: </label>
-        <input type="text" name="location" value="{{users.location}}">
-      </div>
-      <div>
-        <label for="image">img: </label>
-        <input type="text" name='image' value="{{users.image}}">
-      </div>
-      <div>
-        <label for="headline">headline: </label>
-        <input type="" name="headline" value="{{users.headline}}">
-      </div>
-
-      <a href='/users/{{_id}}'><button type="submit">Update Profile</button>
-    </form>
-    <a href="/users">Return to User Page</a>
-
-
   </div>
 </main>

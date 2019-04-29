@@ -1,32 +1,35 @@
-<main>
+<div class="container-fluid hero">
+    <div class="hero-overlay"></div>
+    <h1>Wing Spot Fanatics</h1>
+</div>
+<main class="container">
+    <div class="new-wingspot">
+        <h1>Create New User</h1>
+        <div id="edit-form" class="user-container-show">
 
-    <h1>Create New User</h1>
+            <form action="/users{{users_id}}" method="POST">
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label for="location">Location: </label>
+                    <input type="text" name="location">
+                </div>
+                <div>
+                    <label for="image">Img: </label>
+                    <input type="text" name="image">
+                </div>
+                <div>
+                    <label for="headline">Headline: </label>
+                    <input type="text" name="headline">
+                </div>
 
-
-
-    <div id="edit-form" class="user-container-show">
-
-        <form action="/users{{users_id}}" method="POST">
-            <div>
-                <label for="name">Name: </label>
-                <input type="text" name="name">
-            </div>
-            <div>
-                <label for="location">Location: </label>
-                <input type="text" name="location">
-            </div>
-            <div>
-                <label for="image">Img: </label>
-                <input type="text" name="image">
-            </div>
-            <div>
-                <label for="headline">Headline: </label>
-                <input type="text" name="headline">
-            </div>
-
-            <a href='/users'><button type="submit" class="btn btn-dark">Create New User</button>
-            </a>
-        </form>
-        <a href="/users">Return to User Page</a>
+                <a href='/users'><button type="submit" class="btn btn-dark">Create New User</button>
+                </a>
+            </form>
+            <a href="/users">Return to User Page</a>
+        </div>
     </div>
+    
 </main>

@@ -1,9 +1,4 @@
-<div class="container-fluid hero">
-    <div class="hero-overlay"></div>
-    <h1>Wing Spot Fanatics</h1>
-</div>
-
-<main class="mt-4">
+{{!-- <main class="mt-4">
     <div style="width: 300px;">
         <div class="mx-auto" style="width: 200px;">
             <div class="container">
@@ -34,4 +29,49 @@
         </form>
         <a href="{{users._id}}/wingspots/new"><button class="btn btn-dark">Create New Wing Spot</button></a>
     </div>
-</main>
+</main> --}}
+
+
+<div class="container-fluid hero">
+    <div class="hero-overlay"></div>
+    <h1>{{ user.name }}</h1>
+</div>
+
+<div class="container content">
+
+    <div class="row action-buttons">
+        <a href="{{user._id}}/edit"><button type="submit" class="btn btn-dark">Update User</button></a>
+        <a href="{{user._id}}/wingspots/new"><button class="btn btn-dark">Create New Wing Spot</button></a>
+        <form action="/users/{{user._id}}?_method=DELETE" method="POST">
+            <button type="submit" class="btn btn-dark">Delete User</button>
+        </form>
+    </div>
+
+    <h1>Saved Spots</h1>
+    <div class="row">
+        {{#each wingspots}}
+            <div class="col-sm-12">
+                <div class="card">
+                    <img class="card-img" src="{{image}}">
+                    <div class="card-body">
+                        <div class="content-wrapper left">
+                            <div class="details">
+                                <h1 class="card-title">{{name}}</h1>
+                                <h4 class="card-text">{{type}}</h4>
+                                <h3 class="card-text">{{location}}</h4>
+                            </div>
+                            <div class="wingspots">
+                                {{!-- {{#each wingspot in wingspots}}
+                                    <a href="/users/{{_id}}" class="btn btn-dark">{{ wingspot.name }}</a>
+                                {{/each}} --}}
+                            </div>
+                        </div>
+                        <div class="content-wrapper right">
+                            <a href="/users/{{../user.id}}/wingspots/{{wingspots.id}}" class="btn btn-dark">Details</a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,25 +1,32 @@
-<main>
-    <h1>Create New Wing Spot</h1>
-    <div id="edit-form" class="wingspots-container-show">
+<div class="container-fluid hero">
+    <div class="hero-overlay"></div>
+    <h1>New WingSpot</h1>
+</div>
 
-        <form action="/users/{{user._id}}/wingspots" method="POST">
-            <div>
-                <label for="name">Name: </label>
-                <input type="text" name="name">
-            </div>
-            <div>
-                <label for="location">Location: </label>
-                <input type="text" name="location">
-            </div>
-            <div>
-                <label for="type">Type: </label>
-                <input type="text" name="type">
-            </div>
-            <div>
-                <label for="Image">Picture: </label>
-                <input type="text" name="Image">
-            </div>
-            <button type="submit">Create New Wing Spot</button>
-        </form>
+<main class="container">
+    <div class="new-wingspot">
+        <h1>Create New Wing Spot</h1>
+        <div id="edit-form" class="wingspots-container-show">
+
+            <form action="/users/{{user._id}}/wingspots" method="POST">
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label for="location">Location: </label>
+                    <input type="text" name="location">
+                </div>
+                <div>
+                    <label for="type">Type: </label>
+                    <input type="text" name="type">
+                </div>
+                <div>
+                    <label for="Image">Picture: </label>
+                    <input type="text" name="Image">
+                </div>
+                <button type="submit">Create New Wing Spot</button>
+            </form>
+        </div>
     </div>
 </main>
