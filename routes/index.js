@@ -24,7 +24,7 @@ router.patch('/users/:id', usersController.update)
 //delete user account
 router.delete('/users/:id', usersController.delete)
 
-router.get('/users/:usersId/wingspots/new', wingspotsController.new)
+router.get('/users/:usersId/wingspots', wingspotsController.new)
 router.post('/users/:usersId/wingspots', wingspotsController.create)
 router.get('/users/:usersId/wingspots/:wingspotsId', wingspotsController.show)
 router.get('/users/:usersId/wingspots/:wingspotsId/edit', wingspotsController.edit)
@@ -33,7 +33,7 @@ router.delete('/users/:usersId/wingspots/:wingspotsId', wingspotsController.dele
 
 
 
-router.get('/users/:id/wingspots/:wingspotsId/reviews', reviewsController.show)
+router.get('/users/:usersId/wingspots/:wingspotsId/reviews', reviewsController.show)
 
 
 module.exports = router
