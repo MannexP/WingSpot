@@ -3,11 +3,36 @@
      background-color: #efefef;
  }
 
- #home{
+ .home{
     background-image: url('/images/wingSpotbkgd.png');
+    /* background-image:linear-gradient(rgb(25, 29, 56, 0.7),rgba(0, 0, 0, 0.96)), url('/images/wingSpotbkgd.png'); */
+    background-color:black;
+    opacity: 1;
     background-size: cover;
- }
 
+ }
+ .splash h3{
+     color:#ffffff;
+     width:1200px;
+     margin-bottom:80px;
+     margin-left:180px;
+     line-height:50px;
+     font-weight: 200;
+     
+ }
+.splash {
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    height:100vh;
+    word-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+a{
+    font-weight:200
+}
  .bg-red {
      background: black;
      display: flex;
