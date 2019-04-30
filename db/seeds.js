@@ -16,6 +16,13 @@ const review3 = new Review({
 
 })
 
+const southCityKitchen = new Wingspot({
+    name: "South City Kitchen",
+    image:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    location: "Atlanta",
+    type: "Fine Dining",
+    review:[review1]
+})
 const wildwings = new Wingspot({
     name: "Buffalo Wild Wings",
     image:"https://www.nrn.com/sites/nrn.com/files/styles/article_featured_standard/public/Buffalo%20Wild%20Wings%20Inc_0.jpg?itok=-kx4Kxh_",
@@ -48,22 +55,30 @@ const spencer = new User({
 const stan= new User({
     name: "Stan",
     location: "Atlanta",
-    image: "https://media.licdn.com/dms/image/C4E03AQGOo-7nDKQfrg/profile-displayphoto-shrink_200_200/0?e=1544659200&v=beta&t=fG_TazpcgrC0HzG6kdNMZFhVlxCMSBRdI92QIo21-AY",
+    image: "https://images.unsplash.com/photo-1495147334217-fcb3445babd5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=8c0",
     headline: "I like wings...alot",
     wingspots:[tacomac,crickets]
 })
 const cameron = new User({
     name: "Cameron",
     location: "Atlanta",
-    image: "https://media.licdn.com/dms/image/C5603AQF82uMwkiX9Ow/profile-displayphoto-shrink_200_200/0?e=1544054400&v=beta&t=0GlQGDGui0dQpc38SkaPl0XWRdPJDelf-oMZHEYq0aM",
+    image: "https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1630&q=80",
     headline: "I like wings...right",
     wingspots:[crickets,wildwings]
+})
+const jennifer = new User({
+    name: "Jennifer",
+    location: "Houston",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    headline: "OMG I cant even without wings",
+    wingspots:[crickets,wildwings,southCityKitchen, ]
 })
 User.deleteMany({})
     .then(() => Wingspot.deleteMany({}))
     .then(() => Review.deleteMany({}))
     .then(() => Review.insertMany([review1, review2, review3]))
-    .then(() => Wingspot.insertMany([tacomac, crickets, wildwings]))
+    .then(() => Wingspot.insertMany([tacomac, crickets, wildwings, southCityKitchen]))
+    .then(() => jennifer.save())
     .then(() => cameron.save())
     .then(() => stan.save())
     .then(() => spencer.save())
