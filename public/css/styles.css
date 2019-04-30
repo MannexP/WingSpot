@@ -20,6 +20,7 @@
      font-weight: 200;
      
  }
+
 .splash {
     display:flex;
     justify-content: center;
@@ -32,6 +33,10 @@
 }
 a{
     font-weight:200
+}
+
+.nav-item{
+padding-left:20px;
 }
  .bg-red {
      background: black;
