@@ -41,7 +41,9 @@
 
     <div class="row action-buttons">
         <a href="{{user._id}}/edit"><button type="submit" class="btn btn-dark">Update User</button></a>
-        <a href="{{user._id}}/wingspots/new"><button class="btn btn-dark">Create New Wing Spot</button></a>
+        
+        {{!-- <a href="{{user._id}}/wingspots/new"><button class="btn btn-dark">Create New Wing Spot</button></a> --}}
+        {{!-- <a href="{{user._id}}/wingspots/new"><button class="btn btn-dark">Create New Wing Spot</button></a> --}}
         <form action="/users/{{user._id}}?_method=DELETE" method="POST">
             <button type="submit" class="btn btn-dark">Delete User</button>
         </form>
@@ -62,13 +64,15 @@
                             </div> 
                         </div>
                         <div class="content-wrapper right">
-                            <a href="/users/{{../user.id}}/wingspots/{{../wingspots.id}}" class="btn btn-dark">Details</a>
+                        
                               
-                            {{!-- <a href="/users/{{../user.id}}/wingspots/{{wingspots.id}}" class="btn btn-dark">Details</a> --}}
+                            <a href="/users/{{../user.id}}/wingspots/new" class="btn btn-dark">Details</a>
                         </div>
                     </div>
                 </div> 
             </div>
         {{/each}}
     </div>
+    <a href="{{user._id}}/wingspots/new"><button class="btn btn-dark">Create New Wing Spot</button></a>
+
 </div>
